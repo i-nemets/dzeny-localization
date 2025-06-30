@@ -1,0 +1,17 @@
+{
+  "name": "dzeny-localization",
+  "version": "1.0.0",
+  "description": "Sync translations from Confluence and serve via Vercel",
+  "main": "fetch-confluence.js",
+  "scripts": {
+    "sync": "node fetch-confluence.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "jsdom": "^24.0.0",
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}
