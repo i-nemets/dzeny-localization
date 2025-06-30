@@ -7,6 +7,3 @@ package-lock.json
 *.log
 .DS_Store
 
-# Ignore everything in public/i18n except JSONs
-public/i18n/*
-!public/i18n/**/*.json
