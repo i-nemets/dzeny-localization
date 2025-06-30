@@ -35,11 +35,13 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-          git pull --rebase origin master
+          git pull --rebase origin master || true
 
           git add public/i18n/*.json
           git commit -m "🔄 Sync translations from Confluence" || echo "No changes to commit"
 
-          git push
+          # 🔐 безопасный форс-пуш с авторизацией
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          git push --force-with-lease origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
