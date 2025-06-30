@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Run sync script
-        run: node scripts/fetch-confluence-json.js
+        run: node scripts/fetch-confluence.js
 
       - name: Commit and push updated translations
         run: |
