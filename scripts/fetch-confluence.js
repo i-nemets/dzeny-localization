@@ -46,7 +46,7 @@ const extractJsonBlock = (html) => {
 
 const saveResources = (lang, resources) => {
   Object.entries(resources).forEach(([namespace, content]) => {
-    const dir = path.join("../public", "i18n", lang);
+    const dir = path.join("public", "i18n", lang);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
     const file = path.join(dir, `${namespace}.json`);
